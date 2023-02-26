@@ -48,7 +48,7 @@ fn reverse(mut item: Item) -> Item {
 
   first.value = rest.value;
 
-  item = *rest;
+  item.next = rest.next;
  }//while let Some(rest) = first.next {
 
  first
@@ -119,7 +119,7 @@ fn vector(mut item: Item) -> Vec<i32> {
  while let Some(rest) = item.next {
   vector.push(rest.value);
 
-  item = *rest;
+  item.next = rest.next;
  }//while let Some(rest) = item.next {
 
  vector
